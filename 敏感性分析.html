@@ -1,0 +1,350 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div align="center">
+<title>敏感性分析</title>
+
+
+<style type="text/css">
+* {
+    margin:0;
+	padding:0;
+	font-size:20px;
+	color:#000000;
+	font-family:Verdana, Geneva, sans-serif, "黑体";
+	list-style:none;
+}
+a {
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:underline;
+	color:#ff0000;
+}
+p {
+	line-height:20px;
+}
+#wrap {
+	width:800px;
+	margin:0 auto;
+	padding:0 10px 10px;
+	border-left:1px solid #e7e7e7;
+	border-right:1px solid #e7e7e7;
+}
+#header {
+	width:100%;
+	overflow:hidden;
+}
+.logo {
+	width:100%;
+	height:70px;
+	line-height:75px;
+	font-size:45px;
+	font-family:"华文行楷";
+	background:#616130;
+	color:#fff;
+	text-indent:-580px;
+}
+.nav {
+	width:100%;
+	margin-top:10px;
+}
+.nav li {
+	margin:0 32px;
+	float:left;
+}
+.nav li a {
+	color:#7f7f7f;
+	font-size:16px;
+	display:block;
+	padding-bottom:2px;
+}
+.nav li a:hover {
+	border-bottom:3px solid #cc0000;
+	text-decoration:none;
+}
+.nav li.current {
+	border-bottom:3px solid #cc0000;
+}
+.nav li.current a:hover {
+	border-bottom:none;
+}
+#mainbody {
+	     width:100%;
+	     position:relative;
+	     margin-top:20px;
+}
+#sidebar {
+	width:180px;
+	padding-bottom:10px;
+}
+#sidebar dl {
+	padding:0 0 5px;
+}
+#sidebar dt {
+	font-weight:bold;
+	line-height:22px;
+	font-family:"微软雅黑";
+	font-size:14px;
+	color:#fff;
+	background:#3399cc;
+	padding:5px 0 5px 15px;
+	font-weight:normal;
+	margin-bottom:10px;
+}
+#sidebar dd {
+	line-height:20px;
+	padding-left:15px;
+}
+#sidebar dd.current a {
+	color:#f00;
+}
+#content {
+position:absolute;
+top:0;
+margin-left:200px;
+}
+#content h1 {
+	color:#000;
+	font-size:24px;
+	font-family:"微软雅黑";
+	font-weight:normal;
+}
+#content  h3 {
+	margin-top:10px;
+	line-height:26px;
+}
+#content  dl {
+	margin-bottom:10px;
+}
+#content  dt {
+	font-weight:bold;
+	line-height:26px;
+}
+#content  dd {
+	line-height:22px;
+}
+.learn a {
+	color:#900b09;
+	text-decoration:underline;
+	padding-bottom:2px;
+}
+.learn a:hover {
+	text-decoration:none;
+}
+.tips {
+	color:#999;
+	margin-top:20px;
+}
+.pageto {
+	border-top:1px solid #aaa;
+	border-bottom:3px solid #aaa;
+	margin-top:5px;
+	padding:15px 0;
+}
+.pageto a {
+	margin:0 10px;
+	background:#f3f3f3;
+	padding:5px 20px;
+	border:1px solid #dfdfdf;
+	color:#555;
+}
+.pageto a:hover {
+	color:#000;
+	text-decoration:none;
+}
+.disline {
+	border-bottom:1px dashed #ccc;
+	margin-top:10px;
+}
+#footer {
+	width:100%;
+	margin-top:18px;
+	padding:15px 0;
+	text-align:center;
+	color:#842B00;
+	background:#84C1FF;
+}
+</style>
+
+<!--
+<script>
+function run()
+{
+  var obj = new ActiveXObject("WScript.Shell");
+  obj.Run("open.exe");
+}
+</script>
+<input type=button id="btnRun" value="运行记事本" onclick="run()">
+
+
+<script language="JavaScript">
+function runNotepad()
+{
+   var apL = new ActiveXObject( "WScript.Shell" ) ;
+   apL.Run( "%WINDIR%\\open.exe") ;
+}
+</script>
+<input type="button" value="notepad" onclick="runNotepad()">
+-->
+
+
+</head>
+
+<body>
+<div id="wrap">
+  <div id="header">
+    <div class="logo">敏感性分析</div>
+	<div align="right">
+	<a href="首页.html">返回首页</a></div></div> 
+
+
+<style type="text/css">
+table tr td,th{
+    border:1px solid #000;
+}
+</style>
+</head>
+<div align="center">
+<!--<body  style=background="C:\Users\T.KING\Desktop\毕业设计\网页端\首页\古巴导弹危机.jpg">-->
+<body  style="background:white url('./images/古巴导弹危机22.jpg') no-repeat fixed 50% 0%">  <!--故意设错背景图片标号，不显示背景-->
+
+
+   <!--  <ul>
+			<li><a href="Revenge.S04E20.mp4"target="_blank">Revenge.S04E20.mp4</a></li>
+	</ul>
+	-->
+	
+	
+<video width="720" height="560" controls="controls"> 
+	<source src="movie.ogg" type="video/ogg"> 
+	<source src="./video/Revenge.S04E20.mp4" type="video/mp4"> 
+	您的浏览器不支持此种视频格式。 
+</video> 
+
+<pre>
+      古巴导弹危机Cuban Missile Crisis）,又称加勒比海导弹危机，是1962年10月22日
+冷战时期在美国、苏联与古巴之间爆发的一场极其严重的政治、军事危机。事件爆发的直接
+原因是苏联在古巴部署导弹。这个事件被看作是冷战的顶峰和转折点。在世界史中人类从未
+如此近地站在一场核战争的边缘，甚至有人称之为差点毁灭世界的13天。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p> 
+<img src="./images/古巴导弹危机2.jpg" width="780" height="518" /> 
+<p>古巴导弹危机 图一</p>
+</p> 
+</pre>
+
+<pre>
+      1962年，加勒比海地区发生了一场震惊世界的古巴导弹危机。这场危机差一点引发了
+核战争，使世界处于千钧一发之际。在人类进入核时代以来，在美苏军备竞赛和争夺世界霸
+权的激烈斗争中，没有任何一次危机达到如此惊心动魄的程度。在漫长的冷战岁月中，美国
+曾四次动过使用核弹的念头。这四次核战边缘，只有古巴导弹危机最具一触即发之势，美苏
+双方在核弹按钮旁徘徊。古巴导弹危机不仅使研究国际关系的人们感兴趣，而且值得生活在
+和平时期的人们去回顾和思考。它作为国际关系史的经典事例，为我们以后解决危机冲突提
+供良好的借鉴范式。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p> 
+<img src="./images/古巴导弹危机1.jpg" width="500" height="428" /> 
+<p>古巴导弹危机 图二</p> 
+</p> 
+<a  href="古巴导弹危机：差点毁灭世界的13天-搜狐.pdf" target="_blank"><strong>古巴导弹危机：差点毁灭世界的13天</strong></a> 
+<br><br>
+<p> 
+<img src="./images/古巴导弹危机3.jpg" width="780" height="481" /> 
+<p>古巴导弹危机 图三</p>
+</p> 
+</pre>
+<br>
+<table>
+ <table summary="Cuban Missile Crisis"> 
+ <caption>Cuban Missile Crisis<br/>Four options and 12 feasible states</caption>  
+  <tr>
+    <th>DMs <br/>and options</th>
+    <th>S1</th>
+	<th>S2</th>
+	<th>S3</th>
+	<th>S4</th>
+	<th>S5</th>
+	<th>S6</th>
+	<th>S7</th>
+	<th>S8</th>
+	<th>S9</th>
+	<th>S10</th>
+	<th>S11</th>
+	<th>S12</th>
+  </tr>
+  <tr>
+    <th>US</th>
+  </tr>
+  <tr>
+     <td>Air Strike</td>
+    <!--<td><input value="" /></td>-->
+    <td>N</td>
+	<td>Y</td>
+	<td>N</td>
+	<td>Y</td>
+	<td>N</td>
+	<td>Y</td>
+	<td>N</td>
+	<td>Y</td>
+	<td>N</td>
+	<td>Y</td>
+	<td>N</td>
+	<td>Y</td>
+  </tr>
+  <tr>
+     <td>Blockade</td>
+    <td>N</td>
+	<td>N</td>
+	<td>Y</td>
+	<td>Y</td>
+	<td>N</td>
+	<td>N</td>
+	<td>Y</td>
+	<td>Y</td>
+	<td>N</td>
+	<td>N</td>
+	<td>Y</td>
+	<td>Y</td>
+  </tr><tr>
+     <th>USSR</th>
+  </tr>
+  <tr>
+     <td>Withdraw</td>
+    <td>N</td>
+	<td>N</td>
+	<td>N</td>
+	<td>N</td>
+	<td>Y</td>
+	<td>Y</td>
+	<td>Y</td>
+	<td>Y</td>
+	<td>N</td>
+	<td>N</td>
+	<td>N</td>
+	<td>N</td>
+  </tr>
+  <tr>
+     <td>Escalate</td>
+     <td>N</td>
+	<td>N</td>
+	<td>N</td>
+	<td>N</td>
+	<td>N</td>
+	<td>N</td>
+	<td>N</td>
+	<td>N</td>
+	<td>Y</td>
+	<td>Y</td>
+	<td>Y</td>
+	<td>Y</td>
+  </tr>
+  
+</table>
+
+<br><br><br>
+<div align="right">
+      <div align="right">
+      <div class="pageto"></a> <a href="课题简介.html">上一页</a><a href="用户反馈.html">下一页</a></div></div> 
+<div id="footer">&copy;版权所有</div>
+</body>
+</html>

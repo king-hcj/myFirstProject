@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>课题简介</title>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-size: 20px;
+            line-height: 1.7;
+            background-color: #888;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #content {
+            width: 800px;
+            margin: 0 auto;
+            padding-top: 1px;
+            padding-bottom: 300px;
+        }
+
+        #content .item{
+            width: 100%;
+            height: 540px;
+            position: relative;
+            left:200px;   
+        }
+
+        #content .item img {
+            position: absolute;
+            top: 100px;
+            left: 40px;
+        }
+
+		#content #item1 {
+            background: url("./images/项目背景.jpg") no-repeat center top;
+        }
+
+        #content #item2 {
+            background: url("./images/项目意义.jpg") no-repeat center top;
+        }
+
+        #content #item3 {
+            background: url("./images/项目规划.png") no-repeat center top;
+        }
+
+        #content #item4 {
+            background: url("./images/项目分工.jpg") no-repeat center top;
+        }
+  /*此处代码，让导航菜单在左侧绝对定位显示*/
+       #menu{
+            position:fixed;  
+       }
+
+        #menu ul li a {
+            display: block;
+            margin: 5px 0;
+            font-size: 18px;
+            color: #ccc;
+            width: 140px;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-align: left;
+            border-bottom: 1px dashed #999;
+        }
+
+        #menu ul li a strong {
+            color:#000000;
+        }
+
+        #menu ul li a:hover,
+        #menu ul li a.current {
+            color: #fff;
+            background:#97CBFF;
+        }
+
+        /*ie6 hack*/
+        * html, * html body {
+            background-image: url(about:blank);
+            background-attachment: fixed;
+        }
+
+        * html #menu {
+            /*position: fixed;*/
+            position: absolute;
+            top: expression(((e=document.documentElement.scrollTop)?e:document.body.scrollTop)+100+'px');
+        }
+
+		#wrap {
+				width:780px;
+				margin:0 auto;
+				padding:0 10px 10px;
+				border-left:1px solid #e7e7e7;
+				border-right:1px solid #e7e7e7;
+              }
+			#header {
+				width:100%;
+				overflow:hidden;
+			}
+			.logo {
+				width:100%;
+				height:80px;
+				line-height:80px;
+				font-size:45px;
+				font-family:"华文行楷";
+				background:#FFAF60;
+				color:#fff;
+				text-indent:30px;
+			}
+
+			.pageto {
+				border-top:1px solid #aaa;
+				border-bottom:3px solid #aaa;
+				margin-top:-260px;
+				padding:12px 0;
+			}
+			.pageto a {
+				margin:0 10px;
+				background:#f3f3f3;
+				padding:5px 20px;
+				border:1px solid #dfdfdf;
+				color:#555;
+			}
+			.pageto a:hover {
+				color:#000;
+				text-decoration:none;
+			}
+
+			#footer {
+				width:100%;
+				margin-top:18px;
+				padding:15px 0;
+				text-align:center;
+				color:#842B00;
+				background:#7373B9;
+			}
+		
+		
+</style>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function () {
+    $(window).scroll(function () {
+        var top = $(document).scrollTop();
+        var menu = $("#menu");
+        var items = $("#content").find(".item");
+
+// 此处代码，让导航菜单实现在滚动条滚动的时候自动设置焦点
+        var currentId="";
+        items.each(function(){
+        var m=$(this);
+        var itemtop=m.offset().top;
+        if(top>itemtop-200){
+            currentId="#"+m.attr("id");
+        }else{
+            return false;
+        }  
+        })
+ 
+        var currentLink=menu.find(".current");
+        if(currentId&&currentLink.attr("href")!=currentId){            
+            currentLink.removeClass("current");
+            menu.find("[href="+currentId+"]").addClass("current");
+            }
+        });
+
+    });
+</script>
+</head>
+<body background="./images/简介.jpg">
+<div id="wrap">
+  <div id="header">
+    <div class="logo">课题简介</div>
+<div id="menu">
+<ul>
+<li><a href="#item1"><strong>研究背景</strong></a></li>
+<li><a href="#item2"><strong>研究现状</strong></a></li>
+<li><a href="#item3"><strong>问题归纳</strong></a></li>
+<li><a href="#item4"><strong>研究方法</strong></a></li>
+</ul>
+</div>
+<div id="content">
+
+<div id="item1" class="item">
+   <pre>
+  当前，国际局势正在发生深刻的变化，国际形势中的不稳定、不确定因
+素明显增加，世界还很不太平，霸权主义和强权政治在国际政治、经济和安
+全领域中依然存在，并有新的发展；与此同时，因种族、宗教、领土等问题
+引起的地区冲突此起彼伏，国际犯罪、环境恶化、文化融合、贸易摩擦等跨
+国问题远未解决，国际社会面临的共同挑战还很多；经济全球化给各国的发
+展带来新的机遇，也带来巨大风险。
+  复杂的社会环境，激烈的市场竞争，使得各方之间复杂的矛盾和冲突现象
+日益增多。冲突作为一种普遍现象而广泛存在，大至国际贸易往来的利益冲
+突、资源分配问题、领土争端问题以及国际军事对抗等（例如巴以冲突，南
+海争端，朝核问题，古巴导弹危机、发展与环保等），小至摊贩与城管的冲
+突、家庭就餐餐馆的选择等，可以说冲突现象存在于我们生活中的每个地方。
+  同时，我国社会现阶段也正处于矛盾多发期，近年来因各种矛盾而发生的群
+体冲突事件不断上升。随着冲突事件的频繁发生以及对社会安全问题影响的
+日益加重，利用第三方对冲突各方进行干预调解，显得越来越重要。研究发
+现，第三方调解往往是解决冲突的关键，统计显示，大约70％的冲突都有第
+三方的干预。
+  正是由于第三方调节的重要性，本毕业设计以现有冲突分析理论为基础，
+对冲突敏感性分析解析表达式构建展开研究，为冲突敏感性分析提供数学理
+论上的依据，以此来为实际冲突中第三方的调解提供决策上的辅助。
+</pre>
+</div>
+<div id="item2" class="item">
+<pre>
+  冲突分析图模型已被认为是解决多人多目标决策的一种有效方法，并被
+广泛地应用于政治、经济、军事和文化等诸多领域，其应用价值正逐渐为人
+们所认可，基于图模型的稳定性分析研究也已取得了许多研究成果。
+  在现有的实际应用研究中，使用图模型解决冲突问题还仅限于简单模型
+的求解，对于复杂的战略冲突模型的求解，还稍显不足。
+  目前对于第三方加入冲突调解的研究，多数停留在对第三方的调解模式、
+角色等方面定性的研究上。而由于近些年社会的发展进步以及局势的变化，
+冲突事件频出，无论国际国内事务，第三方对冲突各方进行干预调解都显得
+尤为重要。
+  在冲突分析的研究中，多数是冲突各方偏好已知情况下，研究局势的稳
+定性，而实际冲突中各决策者的偏好往往是不断变化的，所以作为第三方如
+何在各决策者偏好不断变化的情况下依旧能把控局势，使得局势往冲突缓解
+的理想方向发展，冲突最终得以有效调解，这就是冲突敏感性的分析。
+	  
+	 </pre>
+</div>
+<div id="item3" class="item">
+<pre>
+  本毕业设计在现有冲突分析理论基础上，对冲突敏感性分析解析表达式
+构建展开研究，为冲突敏感性分析提供数学理论上的依据，以此来为实际冲
+突中第三方的调解提供决策上的辅助。
+  第一，基于严格有序偏好构建多个决策者的纳什稳定、一般超理性稳定、
+对称超理性稳定以及序列稳定的代数模型，从而促进冲突敏感性分析的研
+究。
+  其次，基于这四种稳定性的代数模型给出判断平衡点敏感性的解析条件。
+这个结果将为第三方制定调解策略奠定理论基础。
+  最后，基于代数表达，把结盟可达矩阵用遗传算法进行求解，这将极大
+促进复杂冲突模型的求解。
+  我们研究冲突分析是为了更好地认识和解决冲突，减少不必要的冲突升
+级，促进冲突各方更好的和平相处，维护所处系统的良好运转和发展。  
+	 </pre>
+</div>
+<div id="item4" class="item">
+<pre>
+（一）博弈论相关知识
+  博弈论又被称为对策论(Game Theory)既是现代数学的一个新分支，也是
+运筹学的一个重要学科，主要研究公式化了的激励结构间的相互作用。是研
+究具有斗争或竞争性质现象的数学理论和方法。博弈论考虑游戏中的个体的
+预测行为和实际行为，并研究它们的优化策略。
+  博弈论已经成为经济学的标准分析工具之一。在生物学、经济学、国际
+关系、计算机科学、政治学、军事战略和其他很多学科都有广泛的应用。
+（二）敏感性分析、敏感性分析法
+  敏感性分析是投资项目的经济评价中常用的一种研究不确定性的方法。
+它在确定性分析的基础上，进一步分析不确定性因素对投资项目的最终经济
+效果指标的影响及影响程度。
+（三）图模型法（GMCR）
+  图模型法是一种和博弈论相关的方法，是在博弈论的基础上发展起来的，
+所以它的分析是精确的，逻辑上是一致的。但是博弈论是定量分析，需要精
+确的百分比数据，而图模型是建立在相对偏好基础之上，它比博弈论简单、
+灵活。借鉴集合论和图论的思想，通过分析冲突事件中的决策者、
+
+	 </pre>
+</div>
+</div>
+</div>
+<div align="right">
+<div class="pageto"></a><a href="敏感性分析.html">下一页</a><a href="首页.html">返回首页</a></div></div> 
+<div id="footer">&copy;版权所有</div>
+</body>
+</html>

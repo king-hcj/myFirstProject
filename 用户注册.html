@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>新用户注册</title>
+<style type="text/css">
+<!--
+#fontfamily1 { font-family:"楷体_GB2312";}
+#color1 { color:#999999;}
+#width1 { width:120px}
+-->
+</style>
+
+<script language="javascript" type="text/javascript">
+
+<!--
+function init()
+{
+  document.UserInfo.UserNme.focus();
+}
+
+function Verify()
+{
+  if(VerifyMiss()==false)
+    return false;
+  else if(VerifyUserName()==false)
+    return false;
+  else if(VerifyPassWord()==false)
+    return false;
+  else if(VerifyEmailAdd()==false)
+    return false;
+  else 
+    return true;
+}
+function VerifyMiss()
+{
+  if(document.UserInfo.UserName.value.length==0||document.UserInfo.PassWord.value.length==0||document.UserInfo.PassWordr.value.length==0||document.UserInfo.EmailAdd.value.length==0||document.UserInfo.EmailAddr.value.length==0||document.UserInfo.PassQues.value.length==0||document.UserInfo.PassAns.value.length==0)
+    {
+  alert("用户信息没有填写完整！");
+  return false;
+}
+}
+function validUserName()
+{
+  valid=true;
+  for(var i=0;i<document.UserInfo.UserName.value.length;i++)
+  {
+    var str=document.UserInfo.UserName.value.charAt(i);
+if(!((str>='a')&&(str<='z'))&&!((str>='A')&&(str<='Z'))&&!(str=="_"))
+  valid=false;
+if(!valid)
+  break;
+  }
+}
+function VerifyUserName()
+{
+  if(validUserName()==false)
+    {
+     alert("您输入的用户名中包含了非法的字符！")；
+ return false;
+}
+  if(document.UserInfo.UserName.value.length<6&&document.UserInfo.UserName.value.length>20) 
+    {
+  alert("您输入的用户名不符合长度要求！")；
+  return false;
+}
+  return true;
+}
+function VerifyPassWord()
+{
+  if(document.UserInfo.PassWord.value!=document.UserInfo.PassWordr.value)
+    {
+  alert("您两次输入的密码不相同，请重新输入密码！");
+  return false;
+}
+  if(document.UserInfo.PassWord.value.length<6&&document.UserInfo.PassWord.value.length>20) 
+    {
+  alert("您输入的密码不符合长度要求！")；
+  return false;
+}
+  return true;	
+}
+function VerifyEmailAdd()
+{
+  if(document.UserInfo.EmailAdd.value!=document.UserInfo.EmailAddr.value)
+    {
+  alert("您两次输入的电子邮件不相同，请重新输入电子邮件！");
+  return false;
+}
+  if(document.UserInfo.EmailAdd.value.search("@"&&".")==-1)
+    {
+  alert("您输入的电子邮件不规范！")
+}
+  return true;	
+}
+-->
+</script>
+</head>
+
+<body background="./images/注册.jpg">
+<br><br><br>
+<table align="center" bgcolor="#80FFFF" width="760px">
+<tr>
+<td>
+<h1 align="center" id="fontfamily1">新用户注册</h1>
+<hr id="color1" />
+
+<form action="reg.jsp" method="post" name="UserInfo" onsubmit="return Verify()">
+<table align="center">
+  <tr>
+    <td>用户名：</td>
+    <td><input type="text" name="UserName" id="width1" maxlength="20" /></td>
+<td>6-20位字符串</td>
+  </tr>
+  <tr>
+    <td>性别：</td>
+    <td><input type="radio" name="Sex" value="male" />男
+        <input type="radio" name="Sex" value="female" />女
+<input type="radio" name="Sex" value="unknown" checked />保密
+    </td>
+  <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>密码：</td>
+<td><input type="password" name="PassWord" id="width1" maxlength="20" /></td>
+<td>6-20位字符串</td>
+  </tr>
+  <tr>
+    <td>确认密码：</td>
+<td><input type="password" name="PassWordr" id="width1" maxlength="20" /></td>
+<td>与密码输入必须一致</td>
+  </tr>
+  <tr>
+    <td>注册邮箱：</td>
+<td><input type="text" name="EmailAdd" id="width1" maxlength="30" /></td>
+<td>用于找回密码</td>
+  </tr>
+  <!--    <tr>
+    <td>邮件确认：</td>
+<td><input type="text" name="EmailAddr" id="width1" maxlength="30" /></td>
+<td>重复上述电子邮件</td>
+  </tr>   -->
+  <tr>
+    <td>密保问题：</td>
+    <td><input type="text" name="PassQues" id="width1" maxlength="30" /></td>
+    <td>忘记密码时的提示问题</td>
+  </tr>
+  <tr>
+    <td>密保答案：</td>
+    <td><input type="text" name="PassAns" id="width1" maxlength="30" /></td>
+    <td>密保问题答案，用于取回密码</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    <div align="center">
+      <pre>
+          <input type="submit" value="确认注册" /> <a href="登录界面.html">返回登录</a>   
+      </pre>
+    </div>
+    </td>
+<td>&nbsp;
+
+</td>
+  </tr>
+</table>
+</form>
+<hr id="color1" />
+<hr id="color1" />
+<div align="center">
+<div id="footer">&copy;版权所有</div>
+</div>
+
+</td>
+</tr>
+</table>
+</body>
+</html>
